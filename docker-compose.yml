@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  home-assistant:
+    image: homeassistant/home-assistant
+    ports:
+      - '8123:8123'
+    env_file:
+      - config.env
+    volumes:
+      - homeassistant_data:/config
+volumes:
+  homeassistant_data:
